@@ -16,6 +16,10 @@ namespace WebTeste.Adminstration
         {
             gvUser.DataSource = db.User.ToList();
             gvUser.DataBind();
+            btnSupprimer.Enabled = false;
+            BtnModifier.Enabled = false;
+            btnValider.Enabled = true;
+            
         }
 
         protected void btnValider_Click(object sender, EventArgs e)
@@ -39,6 +43,9 @@ namespace WebTeste.Adminstration
             txtPassword.Text = gvUser.SelectedRow.Cells[3].Text;
             //txtProfile.Text = gvUser.SelectedRow.Cells[4].Text;
             //txtIdAgence.Text = gvUser.SelectedRow.Cells[5].Text;
+            btnSupprimer.Enabled = true;
+            btnValider.Enabled = false;
+            BtnModifier.Enabled = true;
         }
 
         protected void BtnModifier_Click(object sender, EventArgs e)
@@ -64,5 +71,7 @@ namespace WebTeste.Adminstration
             Server.Transfer("~/Adminstration/frmUser.aspx");
        
         }
+
+       
     }
 }

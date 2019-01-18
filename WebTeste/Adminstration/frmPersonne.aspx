@@ -43,6 +43,7 @@
         <tr>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtNom" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtNom" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
             </td>
             <td>
                 &nbsp;</td>
@@ -71,7 +72,9 @@
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtPrenom" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrenom" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -79,22 +82,23 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>Telephone</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="height: 23px">Telephone</td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px"></td>
+            <td style="height: 23px"></td>
+            <td style="height: 23px"></td>
+            <td style="height: 23px"></td>
         </tr>
         <tr>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtTelephone" runat="server"></asp:TextBox>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTelephone" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+            </td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>
@@ -119,7 +123,8 @@
                 <asp:TextBox CssClass="form-control" ID="txtEmail" runat="server"></asp:TextBox>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+            </td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>
@@ -144,7 +149,8 @@
                 <asp:TextBox CssClass="form-control" ID="txtAdresse" runat="server"></asp:TextBox>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtAdresse" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+            </td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>
@@ -169,7 +175,8 @@
                 <asp:TextBox CssClass="form-control" ID="txtNumpice" runat="server"></asp:TextBox>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNumpice" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+            </td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>

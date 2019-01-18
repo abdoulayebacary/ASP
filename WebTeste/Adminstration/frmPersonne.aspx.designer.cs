@@ -40,6 +40,15 @@ namespace WebTeste.Adminstration {
         protected global::System.Web.UI.WebControls.TextBox txtNom;
         
         /// <summary>
+        /// Contrôle RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// Contrôle txtPrenom.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace WebTeste.Adminstration {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrenom;
+        
+        /// <summary>
+        /// Contrôle RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// Contrôle txtTelephone.
@@ -58,6 +76,15 @@ namespace WebTeste.Adminstration {
         protected global::System.Web.UI.WebControls.TextBox txtTelephone;
         
         /// <summary>
+        /// Contrôle RequiredFieldValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// Contrôle txtEmail.
         /// </summary>
         /// <remarks>
@@ -65,6 +92,15 @@ namespace WebTeste.Adminstration {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// Contrôle RequiredFieldValidator4.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// Contrôle txtAdresse.
@@ -76,6 +112,15 @@ namespace WebTeste.Adminstration {
         protected global::System.Web.UI.WebControls.TextBox txtAdresse;
         
         /// <summary>
+        /// Contrôle RequiredFieldValidator5.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        
+        /// <summary>
         /// Contrôle txtNumpice.
         /// </summary>
         /// <remarks>
@@ -83,6 +128,15 @@ namespace WebTeste.Adminstration {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumpice;
+        
+        /// <summary>
+        /// Contrôle RequiredFieldValidator6.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// Contrôle lsPieces.
