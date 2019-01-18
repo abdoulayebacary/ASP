@@ -36,7 +36,9 @@
                 <td style="height: 23px"></td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtlibelle" runat="server" ErrorMessage="RequiredFieldValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

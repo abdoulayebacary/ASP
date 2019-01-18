@@ -4,11 +4,11 @@
         <table style="width:100%;">
             <tr>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="4">
+                <td colspan="5">
                     <div class="box-body table-responsive no-padding">
 
                     
@@ -22,25 +22,25 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
                 <td>&nbsp;</td>
                  <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="height: 23px"></td>
-                <td style="height: 23px"></td>
+                <td style="height: 23px" colspan="2"></td>
                  <td style="height: 23px"></td>
                 <td style="height: 23px"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td>Code</td>
+                <td colspan="2">Code</td>
                 <td>Libelle</td>
                  <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="margin-left: 40px">&nbsp;</td>
-                <td class="form-group">
+                <td class="form-group" colspan="2">
                     <asp:TextBox CssClass="form-control" ID="txtCaode" runat="server"></asp:TextBox>
                 </td>
                 <td class="form-group">
@@ -48,29 +48,35 @@
                 </td>
             </tr>
             <tr>
-                <td style="margin-left: 40px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                 <td>&nbsp;</td>
+                <td style="margin-left: 40px; height: 23px;"></td>
+                <td colspan="2" style="height: 23px">
+                    <asp:RequiredFieldValidator ID="RegularExpressionValidator1" ControlToValidate="txtCaode" runat="server" ErrorMessage="RegularExpressionValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
+                </td>
+                <td style="height: 23px">
+                    <asp:RequiredFieldValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtLibelle" ErrorMessage="RegularExpressionValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
+                </td>
+                 <td style="height: 23px"></td>
             </tr>
             <tr>
                 <td style="margin-left: 40px">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td style="margin-left: 40px">&nbsp;</td>
-                <td>
+                <td style="margin-left: 40px; height: 30px;"></td>
+                <td style="height: 30px">
                     <asp:Button ID="btnValider" CssClass="btn btn-success" runat="server" Text="Valider" OnClick="btnValider_Click" />
                 </td>
-                <td>
+                <td style="height: 30px">
                     <asp:Button ID="btnModifier" CssClass="btn btn-primary" runat="server" Text="Modifier" OnClick="btnModifier_Click" />
-                    <asp:Button ID="btnSupprimer" CssClass="btn btn-danger" runat="server" Text="Supprierm" OnClick="btnSupprimer_Click" />
+                </td>
+                <td style="height: 30px">
+                    <asp:Button ID="btnSupprimer" CssClass="btn btn-danger" runat="server" Text="Supprimer" OnClick="btnSupprimer_Click" />
                 </td>
             </tr>
             <tr>
                 <td style="margin-left: 40px">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
         </table>

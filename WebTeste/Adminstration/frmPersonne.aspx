@@ -3,6 +3,7 @@
     <form id="form1" runat="server">
     <table style="width:100%;">
         <tr>
+            <td style="width: 45px">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -12,6 +13,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                 &nbsp;</td>
             <td colspan="auto">
                  <div class="box-body table-responsive no-padding">
                 <asp:GridView ID="gvPersonne" runat="server" Width="653px" OnSelectedIndexChanged="gvPersonne_SelectedIndexChanged">
@@ -23,6 +26,7 @@
             </td>
         </tr>
         <tr>
+            <td style="height: 23px; width: 45px;">&nbsp;</td>
             <td style="height: 23px"></td>
             <td style="height: 23px"></td>
             <td style="height: 23px"></td>
@@ -32,6 +36,7 @@
             <td style="height: 23px"></td>
         </tr>
         <tr>
+            <td style="width: 45px">&nbsp;</td>
             <td>Nom</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -41,6 +46,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtNom" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtNom" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
@@ -59,6 +66,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">&nbsp;</td>
             <td>Prenom</td>
             <td style="height: 37px"></td>
             <td style="height: 37px"></td>
@@ -69,11 +77,13 @@
                 &nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtPrenom" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrenom" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrenom" ErrorMessage="RequiredFieldValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -82,6 +92,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="height: 23px; width: 45px">&nbsp;</td>
             <td style="height: 23px">Telephone</td>
             <td style="height: 23px">
                 </td>
@@ -93,11 +104,13 @@
             <td style="height: 23px"></td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtTelephone" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTelephone" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTelephone" ErrorMessage="RequiredFieldValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>
                 &nbsp;</td>
@@ -107,6 +120,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 Email</td>
             <td>
@@ -119,11 +134,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtEmail" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="RequiredFieldValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>
                 &nbsp;</td>
@@ -133,6 +150,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 Adresse</td>
             <td>
@@ -145,11 +164,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtAdresse" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtAdresse" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtAdresse" ErrorMessage="RequiredFieldValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>
                 &nbsp;</td>
@@ -159,6 +180,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 NumPiece</td>
             <td>
@@ -171,11 +194,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:TextBox CssClass="form-control" ID="txtNumpice" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNumpice" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNumpice" ErrorMessage="RequiredFieldValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>
                 &nbsp;</td>
@@ -185,6 +210,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 IdPiece</td>
             <td>
@@ -197,6 +224,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 <asp:DropDownList ID="lsPieces" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="libelleTypePiece" DataValueField="id">
                 </asp:DropDownList>
@@ -212,6 +241,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 &nbsp;</td>
             <td>
@@ -224,6 +255,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td style="width: 45px">
+                &nbsp;</td>
             <td>
                 &nbsp;</td>
             <td>
@@ -241,8 +274,8 @@
         <table style="width:100%;">
         <tr>
             <td>
-                <asp:Button ID="btnAjouter" runat="server" CssClass="btn btn-success" OnClick="btnAjouter_Click" Text="Ajouter" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;<asp:Button ID="btnAjouter" runat="server" CssClass="btn btn-success" OnClick="btnAjouter_Click" Text="Ajouter" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnModifier" runat="server" CssClass="btn btn-primary" OnClick="Button2_Click" Text="modifier" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnSupprimer" runat="server" CssClass="btn btn-danger" OnClick="btnSupprimer_Click" Text="supprimer" />
