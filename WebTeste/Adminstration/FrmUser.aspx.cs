@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -72,6 +74,40 @@ namespace WebTeste.Adminstration
        
         }
 
-       
+
+
+        public DataTable GetTableUser()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("Username", typeof(string));
+            table.Columns.Add("password", typeof(string));
+          
+
+            List<User> Liste = db.User.ToList();
+
+            foreach (var item in Liste)
+            {
+                table.Rows.Add(
+                                item.userName,
+                                item.password
+                                
+                             );
+            }
+
+            return table;
+        }
+
+        protected void btnImprimmer_Click(object sender, EventArgs e)
+        {
+            CrystalDecisions.CrystalReports.Engine.ReportDocument rpth = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
+            rpth.Load(Server.MapPath("~/Report/rptUser.rpt"));
+            rpth.SetDataSource(GetTableUser());
+            rpth.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, String.Format("Liste_User_{0}", DateTime.Now));
+
+        }
+
+        //btn imprimer
+
+
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -60,5 +62,40 @@ namespace WebTeste.Adminstration
 
 
         }
+
+        public DataTable GetTableProfile()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("CodeProfile", typeof(int));
+            table.Columns.Add("libelleProfil", typeof(string));
+           
+
+            List<Profil> Liste = db.Profil.ToList();
+
+            foreach (var item in Liste)
+            {
+                table.Rows.Add(
+                                item.codeProfile,
+                                item.libelleProfil
+                               
+                             );
+            }
+
+            return table;
+        }
+
+        protected void btnImprimmer_Click(object sender, EventArgs e)
+        {
+            CrystalDecisions.CrystalReports.Engine.ReportDocument rpth = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
+            rpth.Load(Server.MapPath("~/Report/rptProfile.rpt"));
+            rpth.SetDataSource(GetTableProfile());
+            rpth.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false,String.Format("Liste_Profile_{0}",DateTime.Now));
+
+        }
+
+
+
+        // btn imprimmer
+
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -75,5 +77,56 @@ namespace WebTeste.Adminstration
             txtPrenom.Text = gvPersonne.SelectedRow.Cells[3].Text;
 
         }
+        public DataTable GetTablePersonne()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("nom", typeof(string));
+            table.Columns.Add("prenom", typeof(string));
+            table.Columns.Add("telephone", typeof(string));
+            table.Columns.Add("adresse", typeof(string));
+            table.Columns.Add("email", typeof(string));
+            table.Columns.Add("numPiece", typeof(string));
+
+            List<Personne> ListePersonne = db.Personne.ToList();
+
+            foreach (var item in ListePersonne)
+            {
+                table.Rows.Add(
+                 item.nom,
+                 item.prenom,
+                 item.telephone,
+                  item.adresse,
+                 item.email,
+                 item.numPiece);
+            }
+
+            return table;
+        }
+
+        protected void btnImprimmer_Click(object sender, EventArgs e)
+        {
+            CrystalDecisions.CrystalReports.Engine.ReportDocument rpth = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
+            rpth.Load(Server.MapPath("~/Report/rptPersonne.rpt"));
+            rpth.SetDataSource(GetTablePersonne());
+            rpth.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, String.Format("Liste_Personne_{0}", DateTime.Now));
+        }
+
+        protected void btnActuliser_Click(object sender, EventArgs e)
+        {
+            // cause validation :: false pour eviter request Validation
+            btnAjouter.Enabled = true;
+            btnModifier.Enabled = false;
+            btnSupprimer.Enabled = false;
+
+            txtAdresse.Text = "";
+            txtEmail.Text = "";
+            txtNom.Text = "";
+            txtNumpice.Text = "";
+            txtPrenom.Text = "";
+            txtTelephone.Text = "";
+              
+        }
+
+        
     }
 }

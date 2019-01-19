@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -67,6 +69,35 @@ namespace WebTeste.Adminstration
             db.Agence.Remove(a);
             db.SaveChanges();
             Server.Transfer("~/Adminstration/frmAgence.aspx");
+        }
+
+        public DataTable GetTableAgence()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("libelleAgence", typeof(string));
+            table.Columns.Add("Quartier", typeof(string));
+            table.Columns.Add("Ville", typeof(string));
+
+            List<Agence> Liste = db.Agence.ToList();
+
+            foreach (var item in Liste)
+            {
+                table.Rows.Add(
+                                item.libelleAgence,
+                                item.Quartier,
+                                item.Ville
+                             );
+            }
+
+            return table;
+        }
+
+        protected void btnImprimmer_Click(object sender, EventArgs e)
+        {
+            CrystalDecisions.CrystalReports.Engine.ReportDocument rpth = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
+            rpth.Load(Server.MapPath("~/Report/rptAgence.rpt"));
+            rpth.SetDataSource(GetTableAgence());
+            rpth.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, String.Format("Liste_Agence_{0}", DateTime.Now));
         }
     }
 }

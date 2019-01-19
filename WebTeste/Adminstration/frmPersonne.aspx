@@ -246,7 +246,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="btnImprimmer" runat="server" OnClientClick="if(!confirm('Vous etes entrain d\'imprimmer la liste des Personnes \n Etes Vous sur?')) return false" Text="Imprimmer" CausesValidation="False" OnClick="btnImprimmer_Click" />
+            </td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>
@@ -282,6 +283,9 @@
             </td>
             <td>
                 &nbsp;</td>
+            <td>
+                <asp:Button ID="btnActuliser" CssClass="btn btn-warning" runat="server" Text="Reset" CausesValidation="False" OnClick="btnActuliser_Click" />
+            </td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>

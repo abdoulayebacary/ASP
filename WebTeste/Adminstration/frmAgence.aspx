@@ -5,10 +5,10 @@
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td colspan="2">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3">
+            <td colspan="4">
                 <asp:GridView ID="gvAgence" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="gvAgence_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -30,18 +30,18 @@
         <tr>
             <td style="height: 23px"></td>
             <td style="height: 23px"></td>
-            <td style="height: 23px"></td>
+            <td style="height: 23px" colspan="2"></td>
         </tr>
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
-            <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 57px">Libelle</td>
             <td style="height: 57px">
                 &nbsp;</td>
-            <td style="height: 57px">
+            <td style="height: 57px" colspan="2">
                 &nbsp;</td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
             <td style="height: 23px">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtLibelle" ErrorMessage="Libbele requies" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
-            <td style="height: 23px">
+            <td style="height: 23px" colspan="2">
             </td>
         </tr>
         <tr>
@@ -59,7 +59,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Quartier"></asp:Label>
             </td>
             <td style="height: 23px"></td>
-            <td style="height: 23px"></td>
+            <td style="height: 23px" colspan="2"></td>
         </tr>
         <tr>
             <td style="height: 23px">
@@ -68,14 +68,14 @@
             <td style="height: 23px">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtQuartier" runat="server" ErrorMessage="Quartier requies" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
-            <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 23px">
                 <asp:Label ID="Label2" runat="server" Text="Ville"></asp:Label>
             </td>
             <td style="height: 23px">&nbsp;</td>
-            <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 23px">
@@ -84,17 +84,17 @@
             <td style="height: 23px">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtVille" runat="server" ErrorMessage="Ville requies" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
             </td>
-            <td style="height: 23px"></td>
+            <td style="height: 23px" colspan="2"></td>
         </tr>
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
-            <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
-            <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 23px">
@@ -106,11 +106,14 @@
             <td style="height: 23px">
                 <asp:Button ID="btnSupprimer" runat="server" Text="Supprimer" OnClick="btnSupprimer_Click" CssClass="btn btn-danger" />
             </td>
+            <td style="height: 23px">
+                <asp:Button ID="btnImprimmer" runat="server" OnClientClick="if(!confirm('Vous etes entrain d\'imprimmer la liste des Agences \n Etes Vous sur?')) return false" Text="Imprimmer" CausesValidation="False" OnClick="btnImprimmer_Click" />
+            </td>
         </tr>
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
-            <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
     </table>
 </form>
