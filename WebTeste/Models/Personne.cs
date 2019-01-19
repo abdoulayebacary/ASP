@@ -12,7 +12,7 @@ namespace WebTeste.Models
         [Key]
         public int id { get; set; }
         [MaxLength(80, ErrorMessage = "taille maximale 80"), Required(ErrorMessage = "champ obligatoire")]
-        public string nom{ get; set; }
+        public string nom { get; set; }
         [MaxLength(80, ErrorMessage = "taille maximale 80"), Required(ErrorMessage = "champ obligatoire")]
         public string prenom { get; set; }
         [DataType(DataType.PhoneNumber)]
@@ -22,7 +22,7 @@ namespace WebTeste.Models
         public string adresse { get; set; }
         [DataType(DataType.EmailAddress)]
         [MaxLength(80, ErrorMessage = "taille maximale 80"), Required(ErrorMessage = "champ obligatoire")]
-        public string email{ get; set; }
+        public string email { get; set; }
         [MaxLength(80, ErrorMessage = "taille maximale 80"), Required(ErrorMessage = "champ obligatoire")]
         public string numPiece { get; set; }
         public int idPiece { get; set; }
