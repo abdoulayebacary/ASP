@@ -15,8 +15,20 @@ namespace WebTeste.Adminstration
         dbTransfertContext db = new dbTransfertContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvPersonne.DataSource = db.Personne.ToList();
+            // gvPersonne.DataSource = db.Personne.ToList();
+                gvPersonne.DataSource = db.Personne
+                .Join(db.TypePiece, x => x.idPiece, y => y.id, (x,y) => new {x.id , x.nom , x.prenom , x.telephone, x.adresse, x.email, x.numPiece,Libelle = y.libelleTypePiece} )
+                .ToList();
             gvPersonne.DataBind();
+
+           // gvRecherche.DataSource = db.Personne
+             // .Join(db.TypePiece, x => x.idPiece, y => y.id, (x, y) => new { x.id, x.nom, x.prenom, x.telephone, x.adresse, x.email, x.numPiece, Libelle = y.libelleTypePiece })
+              //.ToList();
+            //gvRecherche.DataBind();
+
+            btnSupprimer.Enabled = false;
+            btnModifier.Enabled = false;
+            btnAjouter.Enabled = true;
         }
 
         protected void btnAjouter_Click(object sender, EventArgs e)
@@ -76,6 +88,10 @@ namespace WebTeste.Adminstration
             txtNom.Text = gvPersonne.SelectedRow.Cells[2].Text;
             txtPrenom.Text = gvPersonne.SelectedRow.Cells[3].Text;
 
+            btnSupprimer.Enabled = true;
+            btnAjouter.Enabled = false;
+            btnModifier.Enabled = true;
+
         }
         public DataTable GetTablePersonne()
         {
@@ -127,6 +143,24 @@ namespace WebTeste.Adminstration
               
         }
 
-        
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String recherche = txtRecherche.Text;
+           if(recherche != "")
+            {
+            gvRecherche.DataSource = db.Personne
+               .Join(db.TypePiece, x => x.idPiece, y => y.id, (x, y) => new { x.id, x.nom, x.prenom, x.telephone, x.adresse, x.email, x.numPiece, Libelle = y.libelleTypePiece })
+               .Where(t => t.prenom.ToLower().Contains(recherche.ToLower()) ||  t.nom.ToLower().Contains(recherche.ToLower()) || t.telephone.ToLower().Contains(recherche.ToLower()) || t.adresse.ToLower().Contains(recherche.ToLower()) || t.numPiece.Contains(recherche))
+               .ToList();
+            gvRecherche.DataBind();
+            }
+            else
+            {
+                gvRecherche.DataSource = null;
+                gvRecherche.DataBind();
+
+            }
+                     
+        }
     }
 }

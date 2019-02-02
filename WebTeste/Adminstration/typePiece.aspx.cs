@@ -16,6 +16,10 @@ namespace WebTeste.Adminstration
         {
             gvPiece.DataSource = db.TypePiece.ToList();
             gvPiece.DataBind();
+
+            BtnSupprimer.Enabled = false;
+            btnModifer.Enabled = false;
+            btnValider.Enabled = true;
         }
 
         protected void btnValider_Click(object sender, EventArgs e)
@@ -57,6 +61,9 @@ namespace WebTeste.Adminstration
         {
             txtlibelle.Text = gvPiece.SelectedRow.Cells[2].Text;
 
+            BtnSupprimer.Enabled = true;
+            btnValider.Enabled = false;
+            btnModifer.Enabled = true;
 
         }
     }

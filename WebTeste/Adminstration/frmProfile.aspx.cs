@@ -17,6 +17,11 @@ namespace WebTeste.Adminstration
         {
             gvProfil.DataSource = db.Profil.ToList();
             gvProfil.DataBind();
+
+
+            btnSupprimer.Enabled = false;
+            btnModifier.Enabled = false;
+            btnValider.Enabled = true;
         }
 
         protected void btnValider_Click(object sender, EventArgs e)
@@ -45,9 +50,12 @@ namespace WebTeste.Adminstration
 
         protected void gvProfil_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCaode.Text = gvProfil.SelectedRow.Cells[3].Text;
-            txtLibelle.Text = gvProfil.SelectedRow.Cells[2].Text;
+            txtCaode.Text = gvProfil.SelectedRow.Cells[2].Text;
+            txtLibelle.Text = gvProfil.SelectedRow.Cells[3].Text;
 
+            btnSupprimer.Enabled = true;
+            btnValider.Enabled = false;
+            btnModifier.Enabled = true;
 
         }
 

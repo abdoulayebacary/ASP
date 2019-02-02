@@ -3,13 +3,23 @@
     <form id="form1" runat="server">
         <table style="width:100%;">
             <tr>
-                <td>&nbsp;</td>
+                <td style="width: 70px">&nbsp;</td>
                 <td colspan="2">&nbsp;</td>
                 <td colspan="2">&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="6">
-                    <div class="box-body table-responsive no-padding">
+                <td style="margin-left: 40px; width: 70px;">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="margin-left: 40px; width: 70px;">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="height: 137px; width: 70px"></td>
+                <td colspan="4" style="height: 137px">
 
                     
                     <asp:GridView ID="gvProfil" runat="server" Width="808px" CssClass="table table-hover" OnSelectedIndexChanged="gvProfil_SelectedIndexChanged">
@@ -17,29 +27,23 @@
                             <asp:CommandField ShowSelectButton="True" />
                         </Columns>
                     </asp:GridView>
-                        </div>
-                </td>
+                        </td>
+                 <td style="height: 137px"></td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td colspan="2">&nbsp;</td>
-                <td colspan="2">&nbsp;</td>
-                 <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="height: 23px"></td>
+                <td style="height: 23px; width: 70px;"></td>
                 <td style="height: 23px" colspan="2"></td>
                  <td style="height: 23px" colspan="2"></td>
                 <td style="height: 23px"></td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td style="width: 70px">&nbsp;</td>
                 <td colspan="2">Code</td>
                 <td colspan="2">Libelle</td>
                  <td>&nbsp;</td>
             </tr>
             <tr>
-                <td style="margin-left: 40px">&nbsp;</td>
+                <td style="margin-left: 40px; width: 70px;">&nbsp;</td>
                 <td class="form-group" colspan="2">
                     <asp:TextBox CssClass="form-control" ID="txtCaode" runat="server"></asp:TextBox>
                 </td>
@@ -48,7 +52,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="margin-left: 40px; height: 23px;"></td>
+                <td style="margin-left: 40px; height: 23px; width: 70px;"></td>
                 <td colspan="2" style="height: 23px">
                     <asp:RequiredFieldValidator ID="RegularExpressionValidator1" ControlToValidate="txtCaode" runat="server" ErrorMessage="RegularExpressionValidator" CssClass="alert alert-danger"></asp:RequiredFieldValidator>
                 </td>
@@ -58,12 +62,12 @@
                  <td style="height: 23px"></td>
             </tr>
             <tr>
-                <td style="margin-left: 40px">&nbsp;</td>
+                <td style="margin-left: 40px; width: 70px;">&nbsp;</td>
                 <td colspan="2">&nbsp;</td>
                 <td colspan="2">&nbsp;</td>
             </tr>
             <tr>
-                <td style="margin-left: 40px; height: 30px;"></td>
+                <td style="margin-left: 40px; height: 30px; width: 70px;"></td>
                 <td style="height: 30px">
                     <asp:Button ID="btnValider" CssClass="btn btn-success" runat="server" Text="Valider" OnClick="btnValider_Click" />
                 </td>
@@ -78,7 +82,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="margin-left: 40px">&nbsp;</td>
+                <td style="margin-left: 40px; width: 70px;">&nbsp;</td>
                 <td colspan="2">&nbsp;</td>
                 <td colspan="2">&nbsp;</td>
             </tr>

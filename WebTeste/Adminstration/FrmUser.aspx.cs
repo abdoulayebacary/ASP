@@ -16,8 +16,13 @@ namespace WebTeste.Adminstration
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvUser.DataSource = db.User.ToList();
+          // gvUser.DataSource = db.User.ToList();
+            gvUser.DataSource = db.User
+                .Join(db.Profil, x => x.idProfile, y => y.id, (x, y) => new { x.idUser, x.userName, y.libelleProfil, x.idAgence })
+                .Join(db.Agence, x=>x.idAgence,w=>w.idAgence,(x,w) => new { id = x.idUser, x.userName,Profile =  x.libelleProfil, Agence= w.libelleAgence })
+                .ToList();
             gvUser.DataBind();
+
             btnSupprimer.Enabled = false;
             BtnModifier.Enabled = false;
             btnValider.Enabled = true;

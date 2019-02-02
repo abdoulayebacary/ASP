@@ -167,7 +167,7 @@
                     <asp:Button ID="BtnModifier" runat="server" CssClass="btn btn-primary" Text="Modifier" OnClick="BtnModifier_Click" />
                 </td>
                 <td style="height: 30px">
-                    <asp:Button ID="btnSupprimer" runat="server" Text="Supprimer" CssClass="btn btn-danger" OnClick="btnSupprimer_Click" />
+                    <asp:Button ID="btnSupprimer" runat="server" Text="Supprimer" CssClass="btn btn-danger" OnClick="btnSupprimer_Click" CausesValidation="False" />
                 </td>
                 <td style="height: 30px">
                 <asp:Button ID="btnImprimmer" runat="server" OnClientClick="if(!confirm('Vous etes entrain d\'imprimmer la liste des Utilisateur \n Etes Vous sur?')) return false" Text="Imprimmer" CausesValidation="False" OnClick="btnImprimmer_Click" />

@@ -17,6 +17,7 @@ namespace WebTeste.Adminstration
         {
             /*Permet de charger de gridview a partir de la base de donnee  */
             gvAgence.DataSource = db.Agence.ToList();
+
             gvAgence.DataBind();
 
             btnSupprimer.Enabled = false;
@@ -43,6 +44,7 @@ namespace WebTeste.Adminstration
             txtLibelle.Text = gvAgence.SelectedRow.Cells[2].Text;
             txtQuartier.Text = gvAgence.SelectedRow.Cells[3].Text;
             txtVille.Text = gvAgence.SelectedRow.Cells[4].Text;
+
             btnSupprimer.Enabled = true;
             btnAjouter.Enabled = false;
             btnModifier.Enabled = true;

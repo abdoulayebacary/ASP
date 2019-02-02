@@ -5,29 +5,24 @@
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td colspan="2">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="4">
-                <asp:GridView ID="gvAgence" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="gvAgence_SelectedIndexChanged">
-                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <td>
+                &nbsp;</td>
+            <td colspan="auto">
+                 <div class="box-body table-responsive no-padding">
+                <asp:GridView ID="gvAgence" runat="server" Width="100%" OnSelectedIndexChanged="gvAgence_SelectedIndexChanged">
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
                     </Columns>
-                    <EditRowStyle BackColor="#999999" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
+                     </div>
             </td>
         </tr>
         <tr>
+            <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px"></td>
             <td style="height: 23px"></td>
             <td style="height: 23px" colspan="2"></td>
@@ -35,9 +30,11 @@
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
+            <td style="height: 57px">&nbsp;</td>
             <td style="height: 57px">Libelle</td>
             <td style="height: 57px">
                 &nbsp;</td>
@@ -45,6 +42,8 @@
                 &nbsp;</td>
         </tr>
         <tr>
+            <td style="height: 23px">
+                &nbsp;</td>
             <td style="height: 23px">
                 <asp:TextBox ID="txtLibelle" runat="server" CssClass="form-control"></asp:TextBox>
             </td>
@@ -56,12 +55,16 @@
         </tr>
         <tr>
             <td style="height: 23px">
+                &nbsp;</td>
+            <td style="height: 23px">
                 <asp:Label ID="Label1" runat="server" Text="Quartier"></asp:Label>
             </td>
             <td style="height: 23px"></td>
             <td style="height: 23px" colspan="2"></td>
         </tr>
         <tr>
+            <td style="height: 23px">
+                &nbsp;</td>
             <td style="height: 23px">
                 <asp:TextBox ID="txtQuartier" runat="server" CssClass="form-control"></asp:TextBox>
                 </td>
@@ -72,12 +75,16 @@
         </tr>
         <tr>
             <td style="height: 23px">
+                &nbsp;</td>
+            <td style="height: 23px">
                 <asp:Label ID="Label2" runat="server" Text="Ville"></asp:Label>
             </td>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
+            <td style="height: 23px">
+                &nbsp;</td>
             <td style="height: 23px">
                 <asp:TextBox ID="txtVille" runat="server" CssClass="form-control"></asp:TextBox>
                 </td>
@@ -89,14 +96,18 @@
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
+            <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px" colspan="2">&nbsp;</td>
         </tr>
         <tr>
+            <td style="height: 23px">
+                &nbsp;</td>
             <td style="height: 23px">
                 <asp:Button ID="btnAjouter" runat="server" Text="Ajouter" OnClick="btnAjouter_Click" CssClass="btn btn-success" />
             </td>
@@ -111,6 +122,7 @@
             </td>
         </tr>
         <tr>
+            <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px">&nbsp;</td>
             <td style="height: 23px" colspan="2">&nbsp;</td>
