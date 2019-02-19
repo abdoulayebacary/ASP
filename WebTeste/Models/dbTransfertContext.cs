@@ -17,6 +17,7 @@ namespace WebTeste.Models
         public DbSet<Personne> Personne{ get; set; }
         public DbSet<Agence> Agence { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<Utilisateur> utilisateurs { get; set; }
 
     }
 }

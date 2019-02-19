@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmPersonne.aspx.cs" Inherits="WebTeste.Adminstration.frmPersonne" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <form id="form1" runat="server">
+ 
     <table style="width:100%;">
         <tr>
             <td style="width: 45px">&nbsp;</td>
@@ -360,5 +360,5 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    </form>
+
 </asp:Content>

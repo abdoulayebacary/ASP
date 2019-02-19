@@ -1,15 +1,54 @@
 ﻿<%@ Page Title="S'inscrire" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WebTeste.Account.Register" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
-
+  
     <div class="form-horizontal">
         <h4>Créer un nouveau compte</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
+
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtNom" CssClass="col-md-2 control-label">Nom</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtNom" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtNom"
+                    CssClass="text-danger" ErrorMessage="Entrer un Nom" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtPrenom" CssClass="col-md-2 control-label">Prenom</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtPrenom" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPrenom"
+                    CssClass="text-danger" ErrorMessage="Prenom est requies" />
+            </div>
+          </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtAdresse" CssClass="col-md-2 control-label">Adresse</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtAdresse" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtAdresse"
+                    CssClass="text-danger" ErrorMessage="Adresse est requies" />
+            </div>
+          </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Identifiant" CssClass="col-md-2 control-label">Username</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="Identifiant" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="Identifiant"
+                    CssClass="text-danger" ErrorMessage="Username est requis" />
+            </div>
+          </div>
+
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Messagerie</asp:Label>
             <div class="col-md-10">
@@ -18,6 +57,7 @@
                     CssClass="text-danger" ErrorMessage="Le champ d’adresse de messagerie est obligatoire." />
             </div>
         </div>
+
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Mot de passe</asp:Label>
             <div class="col-md-10">
@@ -26,6 +66,7 @@
                     CssClass="text-danger" ErrorMessage="Le champ mot de passe est requis." />
             </div>
         </div>
+
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirmer le mot de passe </asp:Label>
             <div class="col-md-10">
@@ -36,10 +77,12 @@
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="Le mot de passe et le mot de passe de confirmation ne correspondent pas." />
             </div>
         </div>
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="S'inscrire" CssClass="btn btn-default" />
             </div>
         </div>
-    </div>
+  </div>
+       
 </asp:Content>

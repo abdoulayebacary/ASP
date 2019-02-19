@@ -30,7 +30,7 @@ namespace WebTeste.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("Conn", throwIfV1Schema: false)
         {
         }
 

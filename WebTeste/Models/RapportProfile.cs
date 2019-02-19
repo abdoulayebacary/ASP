@@ -12,5 +12,6 @@ namespace WebTeste.Models
 
 
         public string libelleProfil { get; set; }
+
     }
 }
